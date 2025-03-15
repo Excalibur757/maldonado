@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que o padding seja incluído nas dimensões do elemento */
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
@@ -12,6 +12,12 @@ body {
     width: 100%; /* Garante largura total */
     margin: 0;
     padding: 0;
+}
+
+.logo h5 {
+    font-size: 12px;
+    margin-top: -30px; /* Ajuste o valor conforme necessário */
+    margin-left: 80px;
 }
 
 header {
@@ -35,6 +41,11 @@ header .container {
     margin: 0 auto;
 }
 
+header img {
+    max-height: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 10px; /* Espaço entre a logo e o título */
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -47,39 +58,81 @@ nav ul li a {
     font-weight: bold;
 }
 
-section {
+/*------------------------------------------------PARTE KEVIN--------------------------------------------------------------*/
+
+.banner {
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 2rem;
-    text-align: center;
 }
 
-.banner h1{
-    text-align: right;
-    
+.text {
+    flex: 1; /* Ocupa 50% da largura */
+    padding-right: 2rem; /* Dá espaço entre o texto e a imagem */
 }
 
-.banner .image {
-    max-width: 45%;
+.text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.banner .image img {
-    width: 90%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px;
+.image-container {
+    flex: 1; /* Ocupa 50% da largura */
+    display: flex;
+    justify-content: flex-end; /* Mantém a imagem na direita */
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%; /* Faz a imagem ocupar todo o espaço disponível */
+    height: 100%; /* Ajusta a altura para ocupar a seção inteira */
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+
+.highlight {
+    color:#9F082F;
+}
+
+.red-bar {
+    border-bottom: 4px solid #9F082F;
+    padding-bottom: 10px;
+    margin: 10px 0 20px;
+    color: #666;
+    font-size: 1rem;
+    display: inline-block;
+    width: 71%;
+}
+
+.red-bar p {
+    text-align: left;
+    font-size: 20px;
 }
 
 .btn {
-    background-color: #b3003b;
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #9F082F;
     color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
-    margin-top: 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border-radius: 15px;
 }
+
+.btn:hover {
+    background-color: #900000;
+}
+
+/*------------------------------------------------PARTE FELIPE--------------------------------------------------------------*/
+
