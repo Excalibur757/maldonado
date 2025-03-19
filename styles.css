@@ -78,6 +78,7 @@ nav ul li a {
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
+    margin-left: -150px;
 }
 
 .image-container {
@@ -135,7 +136,8 @@ nav ul li a {
 }
 
 /*------------------------------------------------PARTE FELIPE--------------------------------------------------------------*/
-section {
+
+.info {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -331,3 +333,140 @@ h1 {
     margin: 300px 0; /* Isso centraliza a barra de rolagem */
 
 }
+
+/*------------------------------------------------PARTE KEVIN--------------------------------------------------------------*/
+
+        /* Estilos da seção de serviços */
+        .services {
+            background-color: #1d1d1d;
+            color: white;
+            text-align: center;
+        }
+        
+        .services .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .services .left-box {
+            width: 350px;
+            min-height: 150px;
+            padding: 20px;
+            font-size: 25px;
+            border-left: 4px solid #900000;
+            text-align: left;
+            margin-top: 200px;
+        }
+
+        .services h2{
+            color: white;
+            font-size: 40px;
+            padding-top: 10px;
+        }
+
+        .services .right-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Espaço entre os botões */
+        }
+
+        .services .right-box .button {
+            background-color: #444;
+            padding: 12px 20px;
+            border-radius: 25px 0 25px 0; /* Apenas as diagonais serão arredondadas */
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            text-align: left;
+            margin-left: 0; /* Inicialmente sem indentação */
+            margin-top: 5px; /* Distância superior entre os botões */
+        }
+
+        .services .right-box .button:nth-child(1) {
+            margin-left: -200px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .services .right-box .button:nth-child(2) {
+            margin-left: -150px; /* Indentação para o Tópico 2 */
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .services .right-box .button:nth-child(3) {
+            margin-left: -100px; /* Indentação para o Tópico 2 */
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .services .right-box .button:nth-child(4) {
+            margin-left: -50px; /* Indentação para o Tópico 4 */
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .services .right-box .button:nth-child(5) {
+            margin-left: -100px;
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .services .right-box .button:nth-child(6) {
+            margin-left: -150px;
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .services .right-box .button:nth-child(7) {
+            margin-left: -200px;
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+
+        .services .right-box .button:hover {
+            background-color: #900000;
+            transform: translateY(-5px);
+        }
+
+
+        .services .services-container img {
+            width: 50%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-top: 160px;
+            margin-right: 150px;
+           
+        }
+
+        .services .services-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .services .button {
+            background-color: #444;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-align: left;
+        }
+
+        .services .button:hover {
+            background-color: #666;
+        }
+
+/*------------------------------------------------PARTE ?????--------------------------------------------------------------*/

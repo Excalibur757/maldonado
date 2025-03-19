@@ -10,7 +10,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="/image/Logo.png" alt="Logo Maldonado">
+                <img src="/image/logo.png" alt="Logo Maldonado">
                 <h5>MALDONADO INTERNATIONAL BUSINESS</h5>
             </div>
             <nav>
@@ -36,6 +36,7 @@
             <img src="/image/business-meeting.jpg" alt="Assinatura de contrato">
         </div>
     </section>
+
     <section class="info">
         <div class="container">
             <!-- Logo -->
@@ -91,5 +92,33 @@
             </div>
         </div>
     </section>
+
+    <!-- Seção de Serviços -->
+    <section class="services">
+        <h2>Serviços</h2>
+        <div class="container">
+            <div class="left-box" id="info">
+                Passe o mouse sobre um serviço para ver a explicação.
+            </div>
+            <div class="services-container">
+                <img src="/image/logo.png" alt="Assinatura de contrato">
+            </div>
+            <div class="right-box">
+                <div class="button" onmouseover="showInfo('Prestamos consultoria jurídica para empresas e investidores estrangeiros.')">Legal Advisors</div>
+                <div class="button" onmouseover="showInfo('Ajudamos na regulamentação e conformidade junto ao Banco Central do Brasil.')">Brazilian Central Bank</div>
+                <div class="button" onmouseover="showInfo('Auxiliamos empresas na relação com as juntas comerciais para registros e legalizações.')">Boards Of Trade</div>
+                <div class="button" onmouseover="showInfo('Fornecemos suporte para auditorias e contabilidade.')">Accountants & Auditors</div>
+                <div class="button" onmouseover="showInfo('Atendemos empresas privadas que precisam de consultoria especializada.')">Private Sector Entities</div>
+                <div class="button" onmouseover="showInfo('Oferecemos suporte para questões de proteção de dados e conformidade com a LGPD.')">National Data Protection Agency</div>
+                <div class="button" onmouseover="showInfo('Prestamos consultoria para entidades do setor público.')">Public Sector Entities</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showInfo(text) {
+            document.getElementById("info").textContent = text;
+        }
+    </script>
 </body>
 </html>
