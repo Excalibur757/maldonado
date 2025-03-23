@@ -120,5 +120,92 @@
             document.getElementById("info").textContent = text;
         }
     </script>
+
+    <section class="scroll-sections">
+        <div class="scroll-container">
+            <div class="scroll-item">
+                <div class="banner-text">
+                    <h1 class="banner-title">REPRESENTAÇÃO LEGAL DE INVESTIDORES ESTRANGEIROS</h1>
+                    <h5>Como representantes legais, somos a principal conexão do investidor com o país. Atuamos como representantes dos investidores estrangeiros e membros não residentes do conselho em: reuniões de sócios, assembleias gerais, órgãos públicos, agências reguladoras e recebimento de citação judicial.<br><br></h5>
+                    <h6>O representante legal será um de nossos sócios, cada um com mais de 20 anos de experiência, formação acadêmica de primeira linha, profundo conhecimento do ambiente de negócios brasileiro e reputação ilibada.</h6>
+                    <div class="banner-red-bar">
+                        <button class="banner-btn">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="banner-image">
+                    <img src="/image/image.png" alt="Assinatura de contrato">
+                </div>
+            </div>
+            <div class="scroll-item">
+                <div class="banner-text">
+                    <h1 class="banner-title">ADMINITRAÇÃO DE SOCIEDADE SUBSIDIÁRIA E FILIAS DE EMPRESAS DE CAPITAL DE GIRO</h1>
+                    <h5>Ao atribuir, a um dos nossos sócios, o cargo de diretor da subsidiária ou filial da empresa no Brasil, este garantirá que as regras de governança corporativa e de compliance sejam fielmente cumpridas em conformidade com a legislação local e com as normas correlatas estrangeiras.<br><br></h5>
+                    <h6>Nossos sócios são todos profissionais de negócios experientes, com senioridade e qualificação acadêmica adequada ao desempenho do cargo de diretor.</h6>
+                    <div class="banner-red-bar">
+                        <button class="banner-btn">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="banner-image">
+                    <img src="/image/image2.png" alt="Reunião empresarial">
+                </div>
+            </div>
+            <div class="scroll-item">
+                <div class="banner-text">
+                    <h1 class="banner-title">CONEXÕES ESTRATÉGICAS</h1>
+                    <h5>Tendo construído uma rede robusta de contatos ao longo dos anos, podemos, dentro do legalmente permitido, facilitar processos e negociações de nossos clientes com organizações relevantes no Brasil.<br><br></h5>
+                    <h6>Conectando Você às Oportunidades Certas – Com nossa ampla rede de contatos, agilizamos processos e negociações estratégicas dentro dos limites legais, garantindo acesso facilitado às principais organizações no Brasil.</h6>
+                    <div class="banner-red-bar">
+                        <button class="banner-btn">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="banner-image">
+                    <img src="/image/image3.png" alt="Contrato assinado">
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <div class="dot active" onclick="changeSlide(0)"></div>
+            <div class="dot" onclick="changeSlide(1)"></div>
+            <div class="dot" onclick="changeSlide(2)"></div>
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-btn" onclick="prevSlide()">&#10094;</button>
+            <button class="nav-btn" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.scroll-item');
+        const dots = document.querySelectorAll('.dot');
+        const container = document.querySelector('.scroll-container');
+
+        function changeSlide(index) {
+            currentIndex = index;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+            updateSlide();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+            updateSlide();
+        }
+
+        function updateSlide() {
+            const offset = -currentIndex * 100;
+            container.style.transform = `translateX(${offset}%)`;
+            updateDots();
+        }
+
+        function updateDots() {
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+    </script>
 </body>
 </html>
