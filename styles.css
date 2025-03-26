@@ -552,6 +552,40 @@ h1 {
 }
 
 /*------------------------------------------------PARTE GABRIEL SECTION 5------------------------------------------------------*/
+.porque-escolher {
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    padding: 25rem 10rem; 
+    text-align: left; 
+    color: white;
+}
+
+.info-text-content {
+    position: relative;
+    padding-right: 20px;  
+    max-width: 60ch; 
+    word-wrap: break-word; 
+}
+
+.info-text-content::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -10px; 
+    height: calc(100% + 20px); 
+    width: 4px;
+    background-color: #900000; 
+}
+.porque-escolher .content-image2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
 .additional-content {
     background-color: #f5f5f5;
@@ -676,7 +710,6 @@ footer {
     color: #FFFFFF;
     margin: 0;
 }
-
 
 
 
