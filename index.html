@@ -115,12 +115,6 @@
         </div>
     </section>
 
-    <script>
-        function showInfo(text) {
-            document.getElementById("info").textContent = text;
-        }
-    </script>
-
     <section class="scroll-sections">
         <div class="scroll-container">
             <div class="scroll-item">
@@ -174,40 +168,27 @@
         </div>
     </section>
 
-    <script>
-        let currentIndex = 0;
-        const items = document.querySelectorAll('.scroll-item');
-        const dots = document.querySelectorAll('.dot');
-        const container = document.querySelector('.scroll-container');
-
-        function changeSlide(index) {
-            currentIndex = index;
-            updateSlide();
-        }
-
-        function prevSlide() {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
-            updateSlide();
-        }
-
-        function nextSlide() {
-            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-            updateSlide();
-        }
-
-        function updateSlide() {
-            const offset = -currentIndex * 100;
-            container.style.transform = `translateX(${offset}%)`;
-            updateDots();
-        }
-
-        function updateDots() {
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentIndex);
-            });
-        }
-    </script>
-
+    <section class="porque-escolher">
+        <div>
+            <div class="porque-escolher">
+                <div class="info-text-content">
+                    <h3 class="">POR QUE ESCOLHER A MALDONADO?</h3>
+                    <h2>O sucesso começa com a escolha certa. Conte com nossa experiência para transformar desafios em oportunidades!</h2>
+                </div>
+                
+                <div class="content-image2">
+                    <img src="/image/porque.png" alt="Assinatura de contrato">
+                </div>
+            </div>
+            <div class="grupo1">
+                <img src="/image/grupo.png" alt="seila">
+            </div>
+            <div class="image-informe">
+                <img src="/image/logo2.png" alt="seila">
+            </div>
+        </div>
+    </section>
+    
     <section class="additional-content">
     <div class="container">
         <div class="content-box">
@@ -243,5 +224,6 @@
     
     <p class="footer-copy">© 2025 por Maldonado. Desenvolvido por RyusakaTech</p>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
