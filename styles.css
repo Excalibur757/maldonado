@@ -12,6 +12,8 @@ body {
     width: 100%; /* Garante largura total */
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+
 }
 
 .logo h5 {
@@ -270,10 +272,10 @@ h1 {
 }
 
 .info-Titulo {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     margin-top: 100px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     text-align: left; /* Mantém os títulos centralizados */
     margin-left: auto; /* Remove o deslocamento à esquerda */
     margin-right: auto; /* Remove o deslocamento à direita */
@@ -302,7 +304,6 @@ h1 {
     text-align: left;
     max-width: 50%;
 }
-
 
 .info-image {
     flex: 1;
@@ -560,6 +561,15 @@ h1 {
     align-items: center;
     padding: 20px;
     background: #242424;
+}
+
+.porque-escolher2 {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
 .content-wrapper {
