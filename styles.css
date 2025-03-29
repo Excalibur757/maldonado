@@ -2,11 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Crimson Text', Arial, sans-serif;
 }
 
+:root {
+    --cor-fundo-primario: #FFFFFF;
+    --cor-fundo-secundario: #F1F0F0;
+    --cor-fundo-terciario: #2B2B2B;
+    --cor-red: #9F082F;
+    --cor-preta: #000000;
+}
+
+
 body {
-    background-color: #f5f5f5;
+    background-color: var(--cor-fundo-secundario);
     color: #333;
     overflow-x: hidden; /* Remove scroll horizontal */
     width: 100%; /* Garante largura total */
@@ -27,7 +36,7 @@ header {
     align-items: center; /* Centraliza verticalmente os itens */
     justify-content: space-between; /* Espaça os itens entre as extremidades */
     padding: 10px 20px;
-    background-color: gainsboro;
+    background-color: var(--cor-fundo-primario);
     width: 100%;
     position: relative;
     z-index: 10;
@@ -68,11 +77,16 @@ nav ul li a {
     display: flex;
     align-items: center;
     padding: 2rem;
+    background-color: var(--cor-fundo-primario);
 }
 
 .text {
     flex: 1; /* Ocupa 50% da largura */
     padding-right: 2rem; /* Dá espaço entre o texto e a imagem */
+    margin-bottom: 300px;
+    font-family: 'Crimson Text', serif;
+    font-size: 30px;
+
 }
 
 .text h1 {
@@ -80,14 +94,17 @@ nav ul li a {
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
-    margin-left: -150px;
+    margin-left: -460px;
+    
 }
 
 .image-container {
     flex: 1; /* Ocupa 50% da largura */
     display: flex;
     justify-content: flex-end; /* Mantém a imagem na direita */
-    height: 100%;
+    height: 80%;
+    margin-right: -20px;
+    margin-bottom: 100px;
 }
 
 .image-container img {
@@ -116,6 +133,18 @@ nav ul li a {
     width: 71%;
 }
 
+.red-bar-section {
+    width: 100%;
+    border-bottom: 4px solid #9F082F;
+    padding-bottom: 10px;
+    margin: 10px 0 20px;
+    color: #666;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: -10px;
+    
+}
+
 .red-bar p {
     text-align: left;
     font-size: 20px;
@@ -140,13 +169,14 @@ nav ul li a {
 /*------------------------------------------------PARTE FELIPE SECTION 2-----------------------------------------------------*/
 
 .info {
-    width: 100vw;
+    width: 100vh;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     text-align: center;
+    background-color: var(--cor-fundo-secundario);
 }
 
 h1 {
@@ -191,7 +221,6 @@ h1 {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background-color: white;
     overflow-y: auto; /* Ativa o scroll vertical */
     max-height: 1000px;
     min-height: 700px;
@@ -207,6 +236,8 @@ h1 {
     transform: translateX(-50%);
     z-index: 10;
     animation: slideDown 1s ease-in-out forwards;
+    background-color: var(--cor-fundo-secundario);
+
 
 }
 
@@ -217,6 +248,7 @@ h1 {
     z-index: 10;
     opacity: 0; /* Começa invisível */
     padding-bottom: 0;
+    background-color: var(--cor-fundo-secundario);
 }
 
 
@@ -254,6 +286,7 @@ h1 {
     direction: ltr; /* Retorna a leitura normal do conteúdo */
     padding-bottom: 0 !important; 
     margin-bottom: 0 !important;
+    background-color: var(--cor-fundo-secundario);
 }
 
 .info-text {
@@ -297,8 +330,9 @@ h1 {
     height: 888px;
     object-fit: cover;
     margin-bottom: 0 !important;
+    margin-left: auto; /* Isso empurra a imagem para a direita */
+    display: block; /* Garante que o margin funcione corretamente */
 }
-
 .info-text-content {
     flex: 1;
     text-align: left;
@@ -321,17 +355,21 @@ h1 {
     width: 5px; /* Largura da barra de rolagem */
     height: 150px; /* Define uma altura menor para centralizar */
     position: absolute;
+    
 }
 
 .info::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, black 0%, black 20%, #b3003b 30%, #b3003b 150%, black 80%, black 100%);
     border-radius: 6px;
+    
+    
 }
 
 .info::-webkit-scrollbar-track {
     background-color: black;
     border-radius: 10px;
     margin: 300px 0; /* Isso centraliza a barra de rolagem */
+    
 
 }
 
@@ -497,7 +535,7 @@ h1 {
     margin-bottom: 20px;
     font-size: 20px;
 }
-.banner-title {
+.-title {
     font-size: 35px;
     margin-bottom: 40px;
 }
