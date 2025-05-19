@@ -71,99 +71,158 @@ nav ul li a {
 
 /*------------------------------------------------PARTE KEVIN SECTION 1------------------------------------------------------*/
 
-.banner {
-    width: 100vw;
-    height: 100vh;
+
+body {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+}
+.background-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 100vh; /* Ocupa altura total da tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .background-section h2 {
+    font-size: 32px;
+    margin-bottom: 750px;
+    padding: 10px 20px;
+    top: 500;
+    border-radius: 8px;
+  }
+
+  .background-section .logo {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
-    padding: 2rem;
-    background-color: var(--cor-fundo-primario);
+    justify-content: center;
+  }
+
+  .background-section .logo img {
+    max-width: 80%;
+    height: auto;
+  }
+.container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+  padding: 30px 20px;
 }
 
-.text {
-    flex: 1; /* Ocupa 50% da largura */
-    padding-right: 2rem; /* Dá espaço entre o texto e a imagem */
-    margin-bottom: 300px;
-    font-family: 'Crimson Text', serif;
-    font-size: 30px;
-
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -480px; /* ou outro valor maior conforme desejar */
 }
 
-.text h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    margin-left: -460px;
-    
-}
+.left h1 {
+  font-size: 2.5rem;
 
-.image-container {
-    flex: 1; /* Ocupa 50% da largura */
-    display: flex;
-    justify-content: flex-end; /* Mantém a imagem na direita */
-    height: 80%;
-    margin-right: -20px;
-    margin-bottom: 100px;
 }
-
-.image-container img {
-    width: 100%; /* Faz a imagem ocupar todo o espaço disponível */
-    height: 100%; /* Ajusta a altura para ocupar a seção inteira */
-    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
-}
-
-.content {
-    display: flex;
-    width: 100%;
-}
-
 
 .highlight {
-    color:#9F082F;
+  color: #9F082F;
+  font-weight: bold;
+
 }
 
-.red-bar {
-    border-bottom: 4px solid #9F082F;
-    padding-bottom: 10px;
-    margin: 10px 0 20px;
-    color: #666;
-    font-size: 1rem;
-    display: inline-block;
-    width: 71%;
+.subtitle {
+  margin-bottom: 200px;
+  font-size: 1.1rem;
+  color: #555;
 }
 
-.red-bar-section {
-    width: 100%;
-    border-bottom: 4px solid #9F082F;
-    padding-bottom: 10px;
-    margin: 10px 0 20px;
-    color: #666;
-    font-size: 1rem;
-    display: inline-block;
-    margin-top: -10px;
-    
+.text-block {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
-.red-bar p {
-    text-align: left;
-    font-size: 20px;
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #9F082F;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s;
-    border-radius: 15px;
+.right img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
-.btn:hover {
-    background-color: #900000;
+
+nav {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 1rem;
+}
+.top-content, .bottom-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  gap: 20px;
+}
+
+.top-content .left,
+.bottom-content .left,
+.top-content .right,
+.bottom-content .right {
+  flex: 1;
+}
+
+.bottom-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.banner-section {
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
 }
 
 /*------------------------------------------------PARTE FELIPE SECTION 2-----------------------------------------------------*/

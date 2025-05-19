@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #d3d3d3;
+    padding: 10px 0;
+  }
+  
+  header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .logo h5 {
+    font-size: 12px;
+    color: #555;
+    letter-spacing: 1px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  /* Banner */
+  .banner-contato img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Seção de Contato */
+  .contato {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+  }
+  
+  .contato .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .contato-texto {
+    flex: 1;
+    max-width: 40%;
+  }
+  
+  .contato-texto h2 {
+    font-size: 48px;
+    color: #a01535;
+    margin-bottom: 20px;
+  }
+  
+  .contato-texto p {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  
+  .contato-formulario {
+    flex: 1;
+    max-width: 50%;
+    background-color: #d9d9d9;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .contato-formulario form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contato-formulario label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .contato-formulario input,
+  .contato-formulario textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  
+  .contato-formulario button {
+    background-color: #a01535;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    align-self: flex-end;
+  }
+  
+  /* Informações + Mapa */
+  .informacoes {
+    background-color: #fff;
+    text-align: center;
+    padding: 30px 0 10px;
+    font-size: 14px;
+  }
+  
+  .mapa {
+    margin-top: 20px;
+    margin-bottom: -14px;
+  }
+  
+  footer {
+    background-color: #d3d3d3;
+    padding: 40px 0;
+    font-size: 13px;
+    color: #333;
+  }
+  
+  footer .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  footer .logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  footer .logo-footer img {
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  footer .info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    align-items: center;
+  }
+  
+  footer .linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer .linkedin img {
+    height: 30px;
+  }
+  
