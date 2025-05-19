@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Blog Maldonado</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/image/logo.png" alt="Logo Maldonado">
+                <h5>MALDONADO INTERNATIONAL BUSINESS</h5>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <img class="imagem-blog" src="image/img.png" alt="imagem do blog">
+
+    <div class="search-box">
+        <input type="text" placeholder="Pesquisar..." class="search-input">
+        <button class="search-button">🔍</button>
+    </div>
+
+    <!-- Cards de Postagens -->
+    <section class="posts-section">
+    <a href="#post1" class="post-card">
+        <p class="date">04 de Maio</p>
+        <h3 class="title">TÍTULO DA POSTAGEM 1</h3>
+        <p class="preview">PRIMEIRAS LINHAS DA POSTAGEM</p>
+    </a>
+    <a href="#post2" class="post-card">
+        <p class="date">04 de Maio</p>
+        <h3 class="title">TÍTULO DA POSTAGEM 2</h3>
+        <p class="preview">PRIMEIRAS LINHAS DA POSTAGEM</p>
+    </a>
+    <a href="#post3" class="post-card">
+        <p class="date">04 de Maio</p>
+        <h3 class="title">TÍTULO DA POSTAGEM 3</h3>
+        <p class="preview">PRIMEIRAS LINHAS DA POSTAGEM</p>
+    </a>
+</section>
+
+<!-- Seção de conteúdo detalhado -->
+<section id="post1" class="post-content">
+    <h2>TÍTULO DA POSTAGEM 1</h2>
+    <p>Conteúdo completo da postagem 1...</p>
+</section>
+
+<section id="post2" class="post-content">
+    <h2>TÍTULO DA POSTAGEM 2</h2>
+    <p>Conteúdo completo da postagem 2...</p>
+</section>
+
+<section id="post3" class="post-content">
+    <h2>TÍTULO DA POSTAGEM 3</h2>
+    <p>Conteúdo completo da postagem 3...</p>
+</section>
+
+<script>
+    function mostrarPost(id) {
+      // Oculta todos
+      document.querySelectorAll('.post-content').forEach(post => {
+        post.style.display = 'none';
+      });
+
+      // Exibe o escolhido
+      const postSelecionado = document.getElementById(id);
+      if (postSelecionado) {
+        postSelecionado.style.display = 'block';
+        postSelecionado.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Oculta todos inicialmente
+    window.onload = () => {
+      document.querySelectorAll('.post-content').forEach(post => {
+        post.style.display = 'none';
+      });
+    };
+  </script>
+
+</body>
+
+</html>

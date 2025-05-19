@@ -45,3 +45,4 @@ function updateDots() {
 function showInfo(text) {
     document.getElementById("info").textContent = text;
 }
+
