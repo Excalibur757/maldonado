@@ -75,8 +75,9 @@ nav ul li a {
 body {
   background-color: #fff;
   color: #333;
-  padding: 20px;
+  padding: 0px;
 }
+
 .background-section {
     background-size: cover;
     background-position: center;
@@ -114,11 +115,12 @@ body {
     max-width: 80%;
     height: auto;
   }
+
 .container {
   display: flex;
   align-items: center; /* Alinha verticalmente */
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   gap: 30px;
   padding: 30px 20px;
@@ -129,8 +131,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: -480px; /* ou outro valor maior conforme desejar */
+  margin-top: 0;
+  padding-top: 10px; /* ou ajuste conforme desejado */
+  padding-bottom: 40px;
 }
+
 
 .left h1 {
   font-size: 2.5rem;
@@ -144,7 +149,7 @@ body {
 }
 
 .subtitle {
-  margin-bottom: 200px;
+  margin-bottom: 40px;
   font-size: 1.1rem;
   color: #555;
 }
@@ -436,6 +441,8 @@ h1 {
 
         /* Estilos da seção de serviços */
         .services {
+            margin: 0;
+            padding: 0;
             background-color: #1d1d1d;
             color: white;
             text-align: center;
@@ -568,6 +575,7 @@ h1 {
             background-color: #666;
         }
 
+        
 /*------------------------------------------------PARTE KEVIN SECTION 4------------------------------------------------------*/
 
 .scroll-sections {
@@ -586,7 +594,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
     background: var(--cor-fundo-secundario);
 }
 .banner-text {
@@ -621,7 +629,9 @@ h1 {
 .dots {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    background-color: var(--cor-fundo-secundario);
+    padding: 5px 0; /* Reduz o espaçamento vertical */
+    margin-top: 0;   /* Remove o espaçamento extra acima */
 }
 .dot {
     width: 10px;
