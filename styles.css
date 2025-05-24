@@ -70,166 +70,64 @@ nav ul li a {
 }
 
 /*------------------------------------------------PARTE KEVIN SECTION 1------------------------------------------------------*/
-
-
-body {
-  background-color: #fff;
-  color: #333;
-  padding: 0px;
-}
-
-.background-section {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    min-height: 100vh; /* Ocupa altura total da tela */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .background-section h2 {
-    font-size: 32px;
-    margin-bottom: 750px;
-    padding: 10px 20px;
-    top: 500;
-    border-radius: 8px;
-  }
-
-  .background-section .logo {
-    width: 120px;
-    height: 120px;
-    background: white;
-    border-radius: 50%;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .background-section .logo img {
-    max-width: 80%;
-    height: auto;
-  }
-
 .container {
   display: flex;
-  align-items: center; /* Alinha verticalmente */
-  justify-content: space-between;
-  max-width: 1300px;
-  margin: auto;
-  gap: 30px;
-  padding: 30px 20px;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  gap: 50px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Para responsividade */
 }
 
 .left {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 0;
-  padding-top: 10px; /* ou ajuste conforme desejado */
-  padding-bottom: 40px;
+  min-width: 300px;
+  margin-bottom: 10px;
+  margin-top: -20px
 }
-
 
 .left h1 {
   font-size: 2.5rem;
+  margin-bottom: 0px; /* Aqui define o gap */
+}
 
+.subtitle {
+  font-size: 1.1rem;
+  color: #555; /* Espaço entre o título e o subtítulo */
+  margin-bottom: 50px;
+  
 }
 
 .highlight {
   color: #9F082F;
   font-weight: bold;
-
-}
-
-.subtitle {
-  margin-bottom: 40px;
-  font-size: 1.1rem;
-  color: #555;
+  
 }
 
 .text-block {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #333;
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-top: 30px;
+
 }
 
 .right {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
+  align-items: center;
+  min-width: 300px;
 }
 
 .right img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-
-nav {
-  text-align: right;
-  margin-bottom: 30px;
-}
-
-nav a {
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
-  color: #000;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.logo {
-  font-size: 1rem;
-}
-.top-content, .bottom-content {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto 40px;
-  gap: 20px;
-}
-
-.top-content .left,
-.bottom-content .left,
-.top-content .right,
-.bottom-content .right {
-  flex: 1;
-}
-
-.bottom-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
+  max-width: 100%;
+  border-radius: 8px;
   object-fit: cover;
 }
-
-.text-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-.banner-section {
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-}
-
 /*------------------------------------------------PARTE FELIPE SECTION 2-----------------------------------------------------*/
 
 .info {
