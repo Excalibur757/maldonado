@@ -1,4 +1,4 @@
-function showPopup(serviceName) {
+/*function showPopup(serviceName) {
     const popup = document.getElementById("popup");
     const popupText = document.getElementById("popup-text");
     popupText.textContent = `Informações sobre: ${serviceName}`;
@@ -9,16 +9,12 @@ function hidePopup() {
     const popup = document.getElementById("popup");
     popup.style.display = "none";
 }
-
+*/
 let currentIndex = 0;
 const items = document.querySelectorAll('.scroll-item');
 const dots = document.querySelectorAll('.dot');
 const container = document.querySelector('.scroll-container');
 
-function changeSlide(index) {
-    currentIndex = index;
-    updateSlide();
-}
 
 function prevSlide() {
     currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;

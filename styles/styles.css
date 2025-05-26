@@ -1,0 +1,711 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Text', Arial, sans-serif;
+}
+
+:root {
+    --cor-fundo-primario: #FFFFFF;
+    --cor-fundo-secundario: #F1F0F0;
+    --cor-fundo-terciario: #2B2B2B;
+    --cor-red: #9F082F;
+    --cor-preta: #000000;
+}
+
+
+body {
+    background-color: var(--cor-fundo-secundario);
+    color: #333;
+    overflow-x: hidden; /* Remove scroll horizontal */
+    width: 100%; /* Garante largura total */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+.logo h5 {
+    font-size: 12px;
+    margin-top: -30px; /* Ajuste o valor conforme necessário */
+    margin-left: 80px;
+}
+
+header {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Espaça os itens entre as extremidades */
+    padding: 10px 20px;
+    background-color: var(--cor-fundo-primario);
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    height: 80px;
+    box-sizing: border-box; /* Inclui padding no cálculo de largura */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+header img {
+    max-height: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 10px; /* Espaço entre a logo e o título */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/*------------------------------------------------PARTE KEVIN SECTION 1------------------------------------------------------*/
+.container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  gap: 300px;
+  padding: 50px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Para responsividade */
+}
+
+.left {
+  flex: 1;
+}
+
+.left h1 {
+  font-size: 2.9rem;
+  margin-bottom: 30px; /* Aqui define o gap */
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #555;
+  padding-bottom: 200%;
+  
+}
+
+.highlight {
+  color: #9F082F;
+  font-weight: bold;
+}
+
+.text-block {
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.6;
+  margin-top: -150%;
+
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+  min-width: 300px;
+  margin-top: -100px;
+}
+
+.right img {
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+/*------------------------------------------------PARTE FELIPE SECTION 2-----------------------------------------------------*/
+
+/*------------------------------------------------PARTE KEVIN SECTION 3------------------------------------------------------*/
+
+        /* Estilos da seção de serviços */
+        .services {
+            margin: 0;
+            padding: 0;
+            background-color: #1d1d1d;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+        
+        .services .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .services .left-box {
+            width: 350px;
+            min-height: 150px;
+            padding: 20px;
+            font-size: 25px;
+            border-left: 4px solid #900000;
+            text-align: left;
+            margin-top: 200px;
+        }
+
+        .services h2{
+            color: white;
+            font-size: 40px;
+            padding-top: 10px;
+        }
+
+        .services .right-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Espaço entre os botões */
+        }
+
+        .services .right-box .button {
+            background-color: #444;
+            padding: 12px 20px;
+            border-radius: 25px 0 25px 0; /* Apenas as diagonais serão arredondadas */
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            text-align: left;
+            margin-left: 0; /* Inicialmente sem indentação */
+            margin-top: 5px; /* Distância superior entre os botões */
+        }
+
+        .services .right-box .button:nth-child(1) {
+            margin-left: -200px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .services .right-box .button:nth-child(2) {
+            margin-left: -150px; /* Indentação para o Tópico 2 */
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .services .right-box .button:nth-child(3) {
+            margin-left: -100px; /* Indentação para o Tópico 2 */
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .services .right-box .button:nth-child(4) {
+            margin-left: -50px; /* Indentação para o Tópico 4 */
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .services .right-box .button:nth-child(5) {
+            margin-left: -100px;
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .services .right-box .button:nth-child(6) {
+            margin-left: -150px;
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+        .services .right-box .button:nth-child(7) {
+            margin-left: -200px;
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+
+
+        .services .right-box .button:hover {
+            background-color: #900000;
+            transform: translateY(-5px);
+        }
+
+
+        .services .services-container img {
+            width: 50%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-top: 160px;
+            margin-right: 150px;
+           
+        }
+
+        .services .services-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .services .button {
+            background-color: #444;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-align: left;
+        }
+
+        .services .button:hover {
+            background-color: #666;
+        }
+
+        
+/*------------------------------------------------PARTE KEVIN SECTION 4------------------------------------------------------*/
+
+.scroll-sections {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.scroll-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.scroll-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background: var(--cor-fundo-secundario);
+}
+.banner-text {
+    margin-left: 30px;
+    max-width: 50%;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.-title {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.banner-red-bar {
+    margin-top: 10px;
+}
+.banner-btn {
+    background-color: #9F082F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 50px;
+    border-radius: 20px 0 20px 0; /* Apenas as diagonais serão arredondadas */
+}
+.banner-image img {
+    width: 100%; /* Faz a imagem ocupar todo o espaço disponível */
+    height: 500px; /* Ajusta a altura para ocupar a seção inteira */
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
+    margin-right: 30px;
+    padding-right: 30px;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-fundo-secundario);
+    padding: 5px 0; /* Reduz o espaçamento vertical */
+    margin-top: 0;   /* Remove o espaçamento extra acima */
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 8px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #900000;
+}
+.nav-buttons {
+    color: var(--cor-red);
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.nav-btn {
+    background-color: var(--cor-red);
+    color: var(black);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/*------------------------------------------------PARTE GABRIEL SECTION 5------------------------------------------------------*/
+.porque-escolher {
+    background: #242424;
+    padding: 40px 0;
+  }
+  
+  .porque-escolher2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 5%;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .left-column {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .content-image2 {
+    width: 40%;
+
+  }
+  
+  .content-image2 img {
+    width: 65%;
+    float: right;
+     
+  }
+  
+  .info-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 120px; /* Aqui define o espaço entre o h3 e o h2 */
+  }
+
+  .info-text-content h3 {
+    color: #BABABA;
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .info-text-content h2 {
+    color: white;
+    font-size: 28px;
+    margin: 10px 0 0 0;
+    line-height: 1.4;
+  }
+  
+  /* Bloco dos cards (grupo1) */
+  .grupo1 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: #333;
+    padding: 15px;
+    color: white;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+/*------------------------------------------------PARTE FELIPE SECTION 6-----------------------------------------------------*/
+
+.additional-content {
+    background-color: #f5f5f5;
+    padding: 60px 30px;
+}
+
+.additional-content .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.additional-content .content-box {
+    flex: 1;
+    min-width: 280px;
+}
+
+.additional-content .content-box h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.additional-content .content-box p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.additional-content .content-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.additional-content .content-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.additional-content .content-box {
+    flex: 1;
+    min-width: 280px;
+    padding-left: 40px;
+}
+
+.btn-sem-borda {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #9F082F;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 30px;
+}
+
+/*------------------------------------------------PARTE FELIPE FOOTER--------------------------------------------------------*/
+
+footer {
+    background-color: #242424;
+    padding: 40px 20px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-logo img {
+    max-width: 200px;
+}
+
+.footer-info {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Alinha à esquerda */
+    text-align: center;
+    padding-left: 210px; /* Ajuste conforme o alinhamento que deseja */
+    color:#FFFFFF;
+}
+
+.footer-info p {
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-botao {
+    max-width: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.img-botao:hover {
+    transform: scale(1.1);
+}
+
+.footer-line {
+    margin: 30px auto 15px;
+    width: 90%;
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+
+
+/* ------------------ Responsividade ------------------ */
+
+/* RESPONSIVIDADE */
+
+/* Para telas menores que 1200px */
+@media (max-width: 1200px) {
+    .container {
+        gap: 100px;
+    }
+
+    .services .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .left-box {
+        margin-top: 50px;
+        width: 80%;
+    }
+
+    .services .services-container img {
+        width: 80%;
+        margin: 50px auto 0 auto;
+    }
+}
+
+/* Para telas menores que 992px */
+@media (max-width: 992px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .right {
+        margin-top: 0;
+    }
+
+    .subtitle, .text-block {
+        padding-bottom: 50px;
+        margin-top: 0;
+    }
+
+    .services .right-box .button {
+        margin-left: 0 !important;
+    }
+
+    .scroll-item {
+        flex-direction: column;
+    }
+
+    .banner-text {
+        max-width: 90%;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .banner-image img {
+        height: 300px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .porque-escolher2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-column, .content-image2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-image2 img {
+        width: 80%;
+        float: none;
+    }
+
+    .grupo1 .card {
+        width: 100%;
+    }
+}
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .left h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle, .text-block {
+        font-size: 1rem;
+    }
+
+    .services h2 {
+        font-size: 30px;
+    }
+
+    .services .left-box {
+        font-size: 18px;
+    }
+
+    .scroll-item {
+        padding: 20px;
+    }
+
+    .banner-text .-title {
+        font-size: 25px;
+    }
+
+    .nav-buttons .nav-btn {
+        padding: 8px 12px;
+    }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    header img {
+        max-height: 40px;
+    }
+
+    .logo h5 {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .banner-image img {
+        height: 200px;
+    }
+
+    .banner-btn {
+        padding: 8px 12px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+}
