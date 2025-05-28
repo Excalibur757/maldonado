@@ -17,9 +17,8 @@ h1 {
     align-items: center;
     background-color: #c4c4c4;
     padding: 60px 40px;
-    gap: 100px;
+    gap: 45px;
     flex-wrap: wrap;
-    margin-left: 18%;
 }
 
 .container2 p {
@@ -32,7 +31,7 @@ h1 {
 }
 
 .container2 img {
-    width: 50%;
+    width: 60%;
     height: auto;
 }
 
@@ -42,7 +41,7 @@ h1 {
     align-items: center;
     background-color: #c4c4c4;
     padding: 60px 40px;
-    gap: 60px;
+    gap: 320px;
     flex-wrap: wrap;
 }
 
@@ -77,4 +76,23 @@ h1 {
     width: 260px;
     height: auto;
     border-radius: 12px;
+}
+
+
+@media (max-width: 1400px) {
+    .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #c4c4c4;
+        padding: 60px 10px;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 0 auto; /* centraliza horizontalmente */
+    }
+
+    .container2 img {
+        width: 50%;
+        height: auto;
+    }
 }
