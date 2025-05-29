@@ -13,7 +13,7 @@ body {
 
 /* Cabeçalho */
 header {
-  background-color: #d3d3d3;
+  background-color: #D9D9D9;
   padding: 10px 0;
 }
 
@@ -154,7 +154,7 @@ nav ul li a {
 
 /* Rodapé */
 footer {
-  background-color: #242424;
+  background-color: #A5A2A2;
   padding: 40px 20px 20px;
   text-align: center;
   font-size: 14px;

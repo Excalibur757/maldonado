@@ -17,8 +17,13 @@ h1 {
     align-items: center;
     background-color: #c4c4c4;
     padding: 60px 40px;
-    gap: 45px;
+    gap: 300px;
     flex-wrap: wrap;
+}
+
+/* Inversão opcional */
+.container2.reverse {
+    flex-direction: row-reverse;
 }
 
 .container2 p {
@@ -27,11 +32,11 @@ h1 {
     color: #1a1a1a;
     line-height: 2.0;
     text-align: justify;
-
 }
 
 .container2 img {
-    width: 60%;
+    width: 100%;
+    max-width: 400px;
     height: auto;
 }
 
@@ -79,20 +84,3 @@ h1 {
 }
 
 
-@media (max-width: 1400px) {
-    .container2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #c4c4c4;
-        padding: 60px 10px;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin: 0 auto; /* centraliza horizontalmente */
-    }
-
-    .container2 img {
-        width: 50%;
-        height: auto;
-    }
-}
