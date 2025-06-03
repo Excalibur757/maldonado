@@ -310,6 +310,16 @@ nav ul li a {
     margin-top: 50px;
     border-radius: 20px 0 20px 0; /* Apenas as diagonais serão arredondadas */
 }
+
+.banner-btn-blog {
+    background-color: #9F082F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 20px 0 20px 0; /* Apenas as diagonais serão arredondadas */
+    margin-left: 230%;
+}
 .banner-image img {
     width: 100%; /* Faz a imagem ocupar todo o espaço disponível */
     height: 500px; /* Ajusta a altura para ocupar a seção inteira */

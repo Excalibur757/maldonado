@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Escrever Publicação</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #c4c4c4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 80px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #8c0023;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #8c0023;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a8002e;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Escrever Nova Publicação</h2>
+
+    <form id="postForm">
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" name="titulo" required>
+
+      <label for="conteudo">Conteúdo</label>
+      <textarea id="conteudo" name="conteudo" rows="6" required></textarea>
+
+      <button type="submit">Publicar</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('postForm');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const titulo = document.getElementById('titulo').value;
+      const conteudo = document.getElementById('conteudo').value;
+
+      try {
+        const resposta = await fetch('https://testebackout-production.up.railway.app/posts2', {  // Ajuste para sua rota real
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ titulo, conteudo })
+        });
+
+        if (resposta.ok) {
+          alert('Publicação criada com sucesso!');
+          window.location.href = 'blog.html';  // Redireciona de volta para a lista
+        } else {
+          alert('Erro ao criar a publicação.');
+        }
+      } catch (erro) {
+        console.error('Erro:', erro);
+        alert('Erro ao enviar a publicação.');
+      }
+    });
+  </script>
+</body>
+</html>

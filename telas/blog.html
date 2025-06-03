@@ -20,7 +20,7 @@
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="quem-somos.html">Sobre nós</a></li>
-                    <li><a href="">Serviços</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
@@ -32,42 +32,13 @@
     <div class="search-box">
         <input type="text" placeholder="Pesquisar..." class="search-input">
         <button class="search-button">🔍</button>
-    </div>
+        <button class="banner-btn-blog" onclick="window.location.href='login.html'">Publicar</button>
+      </div>
 
     <!-- Cards de Postagens -->
-    <section class="posts-section">
-    <a href="#post1" class="post-card">
-        <p class="date">04 de Maio</p>
-        <h3 class="title">TÍTULO DA POSTAGEM 1</h3>
-        <p class="preview">PRIMEIRAS LINHAS DA POSTAGEM</p>
-    </a>
-    <a href="#post2" class="post-card">
-        <p class="date">04 de Maio</p>
-        <h3 class="title">TÍTULO DA POSTAGEM 2</h3>
-        <p class="preview">PRIMEIRAS LINHAS DA POSTAGEM</p>
-    </a>
-    <a href="#post3" class="post-card">
-        <p class="date">04 de Maio</p>
-        <h3 class="title">TÍTULO DA POSTAGEM 3</h3>
-        <p class="preview">PRIMEIRAS LINHAS DA POSTAGEM</p>
-    </a>
-</section>
+    <section class="posts-section"></section>
+    <div class="detalhes-posts"></div>
 
-<!-- Seção de conteúdo detalhado -->
-<section id="post1" class="post-content">
-    <h2>TÍTULO DA POSTAGEM 1</h2>
-    <p>Conteúdo completo da postagem 1...</p>
-</section>
-
-<section id="post2" class="post-content">
-    <h2>TÍTULO DA POSTAGEM 2</h2>
-    <p>Conteúdo completo da postagem 2...</p>
-</section>
-
-<section id="post3" class="post-content">
-    <h2>TÍTULO DA POSTAGEM 3</h2>
-    <p>Conteúdo completo da postagem 3...</p>
-</section>
 <footer>
     <div class="footer-content">
         <div class="footer-logo">
@@ -90,28 +61,88 @@
     
     <p class="footer-copy">© 2025 por Maldonado. Desenvolvido por RyusakaTech</p>
   </footer>
-<script>
+  <script>
+    async function carregarPosts() {
+      try {
+        const resposta = await fetch('https://testebackout-production.up.railway.app/posts2');
+        const posts = await resposta.json();
+  
+        const postsSection = document.querySelector('.posts-section');
+        const detalhesSection = document.querySelector('.detalhes-posts');
+  
+        postsSection.innerHTML = '';
+        detalhesSection.innerHTML = '';
+  
+        posts.forEach((post, index) => {
+          const postId = `post${index + 1}`;
+  
+          // Cria o card
+          const card = document.createElement('a');
+          card.href = `#${postId}`;
+          card.className = 'post-card';
+          card.onclick = function(e) {
+            e.preventDefault();
+            mostrarPost(postId);
+          };
+  
+          const date = document.createElement('p');
+          date.className = 'date';
+          date.textContent = post.data || 'Data não informada';
+  
+          const title = document.createElement('h3');
+          title.className = 'title';
+          title.textContent = post.titulo;
+  
+          const preview = document.createElement('p');
+          preview.className = 'preview';
+          preview.textContent = post.conteudo.slice(0, 100) + '...';
+  
+          card.appendChild(title);
+          card.appendChild(preview);
+  
+          postsSection.appendChild(card);
+  
+          // Cria a seção detalhada
+          const postContent = document.createElement('section');
+          postContent.id = postId;
+          postContent.className = 'post-content';
+  
+          const h2 = document.createElement('h2');
+          h2.textContent = post.titulo;
+  
+          const p = document.createElement('p');
+          p.textContent = post.conteudo;
+  
+          postContent.appendChild(h2);
+          postContent.appendChild(p);
+  
+          detalhesSection.appendChild(postContent);
+        });
+  
+        // Oculta todas as seções inicialmente
+        document.querySelectorAll('.post-content').forEach(post => {
+          post.style.display = 'none';
+        });
+      } catch (erro) {
+        console.error('Erro ao carregar posts:', erro);
+      }
+    }
+  
     function mostrarPost(id) {
-      // Oculta todos
       document.querySelectorAll('.post-content').forEach(post => {
         post.style.display = 'none';
       });
-
-      // Exibe o escolhido
+  
       const postSelecionado = document.getElementById(id);
       if (postSelecionado) {
         postSelecionado.style.display = 'block';
         postSelecionado.scrollIntoView({ behavior: 'smooth' });
       }
     }
-
-    // Oculta todos inicialmente
+  
     window.onload = () => {
-      document.querySelectorAll('.post-content').forEach(post => {
-        post.style.display = 'none';
-      });
+      carregarPosts();
     };
   </script>
-
 </body>
 </html>
