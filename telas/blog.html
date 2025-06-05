@@ -73,51 +73,30 @@
         postsSection.innerHTML = '';
         detalhesSection.innerHTML = '';
   
-        posts.forEach((post, index) => {
-          const postId = `post${index + 1}`;
-  
+        posts.forEach((post) => {
           // Cria o card
           const card = document.createElement('a');
-          card.href = `#${postId}`;
+          card.href = `blog-post.html?id=${post.id}`;
           card.className = 'post-card';
-          card.onclick = function(e) {
-            e.preventDefault();
-            mostrarPost(postId);
-          };
-  
+
           const date = document.createElement('p');
           date.className = 'date';
           date.textContent = post.data || 'Data não informada';
-  
+
           const title = document.createElement('h3');
           title.className = 'title';
           title.textContent = post.titulo;
-  
+
           const preview = document.createElement('p');
           preview.className = 'preview';
           preview.textContent = post.conteudo.slice(0, 100) + '...';
-  
+
           card.appendChild(title);
           card.appendChild(preview);
-  
+
           postsSection.appendChild(card);
-  
-          // Cria a seção detalhada
-          const postContent = document.createElement('section');
-          postContent.id = postId;
-          postContent.className = 'post-content';
-  
-          const h2 = document.createElement('h2');
-          h2.textContent = post.titulo;
-  
-          const p = document.createElement('p');
-          p.textContent = post.conteudo;
-  
-          postContent.appendChild(h2);
-          postContent.appendChild(p);
-  
-          detalhesSection.appendChild(postContent);
-        });
+      });
+
   
         // Oculta todas as seções inicialmente
         document.querySelectorAll('.post-content').forEach(post => {

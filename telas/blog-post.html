@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post | Maldonado Blog</title>
+    <link rel="stylesheet" href="../styles/blog.css">
+</head>
+
+<body>
+    <header>
+        <div class="layout-header">
+            <div class="brand-logo">
+                <img src="../image/logo.png" alt="Logo Maldonado">
+                <h5>MALDONADO INTERNATIONAL BUSINESS</h5>
+            </div>
+            <nav>
+                <ul class="menu-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="quem-somos.html">Sobre nós</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-post">
+        <h1 id="titulo-post">Carregando...</h1>
+        <p id="data-post"></p>
+        <div id="conteudo-post"></div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../image/Logo2.png" alt="Logo Maldonado">
+            </div>
+            <div class="footer-info">
+                <p>Telefone: +55 11 2720-0930 <br>
+                Email: contato@maldonadoleal.com <br>
+                Endereço: AV. Paulista, 1765 - cj 121 Ed. Scarpa <br>
+                São Paulo - SP - Brazil</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/maldonadoleal/" class="img-botao-link">
+                    <img src="../image/Linkdln.png" alt="LinkedIn" class="img-botao">
+                </a>
+            </div>
+        </div>
+        
+        <hr class="footer-line">
+        
+        <p class="footer-copy">© 2025 por Maldonado. Desenvolvido por RyusakaTech</p>
+      </footer>
+    
+    <script>
+        async function carregarPost() {
+            const params = new URLSearchParams(window.location.search);
+            const postId = params.get('id');
+
+            if (!postId) {
+                document.getElementById('titulo-post').textContent = 'Post não encontrado.';
+                return;
+            }
+
+            try {
+                const resposta = await fetch('https://testebackout-production.up.railway.app/posts2');
+                const posts = await resposta.json();
+
+                const post = posts.find(p => p.id == postId || p._id == postId);
+
+                if (!post) {
+                    document.getElementById('titulo-post').textContent = 'Post não encontrado.';
+                    return;
+                }
+
+                document.getElementById('titulo-post').textContent = post.titulo;
+                document.getElementById('data-post').textContent = post.data || 'Data não informada';
+
+                const contentDiv = document.getElementById('conteudo-post');
+                contentDiv.innerHTML = post.conteudo.replace(/\n/g, '<br>');
+
+            } catch (erro) {
+                console.error('Erro ao carregar post:', erro);
+                document.getElementById('titulo-post').textContent = 'Erro ao carregar o post.';
+            }
+        }
+
+        window.onload = carregarPost;
+    </script>
+</body>
+
+</html>

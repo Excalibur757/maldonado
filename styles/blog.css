@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #F1F0F0;
+    
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.menu-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-nav li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main Post Content */
+.content-post {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+#titulo-post {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#data-post {
+    font-size: 0.9em;
+    color: #666;
+}
+
+#conteudo-post {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #A5A2A2;
+    padding: 40px 20px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-logo img {
+    max-width: 200px;
+}
+
+.footer-info {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Alinha à esquerda */
+    text-align: center;
+    padding-left: 220px; /* Ajuste conforme o alinhamento que deseja */
+    color:#FFFFFF;
+}
+
+.footer-info p {
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-botao {
+    max-width: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.img-botao:hover {
+    transform: scale(1.1);
+}
+
+.footer-line {
+    margin: 30px auto 15px;
+    width: 90%;
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: #FFFFFF;
+    margin: 0;
+}
