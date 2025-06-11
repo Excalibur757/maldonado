@@ -36,7 +36,7 @@ header {
     align-items: center; /* Centraliza verticalmente os itens */
     justify-content: space-between; /* Espaça os itens entre as extremidades */
     padding: 10px 20px;
-    background-color: var(--cor-fundo-primario);
+    background-color: #F1F0F0;
     width: 100%;
     position: relative;
     z-index: 10;
@@ -356,7 +356,6 @@ nav ul li a {
     transform: translateY(-50%);
 }
 .nav-btn {
-    background-color: var(--cor-red);
     color: var(black);
     border: none;
     padding: 10px 11px;
